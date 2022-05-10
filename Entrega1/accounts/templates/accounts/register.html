@@ -1,0 +1,16 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<form action="" method="POST"> 
+    
+    {%csrf_token%}
+
+    {{form.as_p}}
+
+    <button type="submit">Registrar</button>
+
+</form>
+{% endblock %}

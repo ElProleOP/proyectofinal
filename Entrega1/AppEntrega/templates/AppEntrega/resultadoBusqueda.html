@@ -1,0 +1,28 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    {% if socios %}
+
+    <h1>Estas buscando el email: {{email}}</h1>
+
+    <ul>
+        {% for socio in socios %}
+
+           <li><p>Nombre: {{socio.nombre}}</p> </li>
+           <li><p>Apellido: {{socio.apellido}}</p></li>
+           <li><p>Edad: {{socio.edad}}</p></li>
+           <li><p>Email: {{socio.email}}</p></li>
+           
+        {% endfor %}
+
+    {% endif %}
+    </ul>
+
+
+
+
+{% endblock %}

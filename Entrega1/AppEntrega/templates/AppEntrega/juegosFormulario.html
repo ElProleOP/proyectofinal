@@ -1,0 +1,26 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Ingresa tu juego de mesa</h1>
+{%if miFormulario.errors%}
+
+    <p style="color:red;">Estan mal los datos, revisar </p>
+
+    {%endif%}
+
+    <form action="" method="POST"> {%csrf_token%}
+
+        <table>
+
+            {{miFormulario3.as_table}}
+
+        </table>
+
+        <input type="submit", value="Enviar">
+
+    </form>
+
+{% endblock %}

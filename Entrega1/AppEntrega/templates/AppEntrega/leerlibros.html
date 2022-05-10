@@ -1,0 +1,17 @@
+{% extends "AppEntrega/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+{%for l in libros%}
+    <li>{{l}}
+    <button>
+        <a href="{% url 'Eliminar' l.numero_de_guia %}">Eliminar</a>
+        <a href="{% url 'Detalles' l.numero_de_guia %}">Detalles</a>
+    </button>
+    </li>
+{%endfor%}
+<li><a href="{% url 'Libros' %}">Agregar libros </a> </li>
+
+{% endblock %}
